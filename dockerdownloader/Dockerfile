@@ -8,7 +8,7 @@ RUN curl -o docker.tgz https://download.docker.com/linux/static/stable/x86_64/do
 		-C /usr/local/bin docker/docker \
 	&& rm docker.tgz
 
-COPY entry.sh /
-RUN chmod +x /entry.sh
+#COPY entry.sh /
+#RUN chmod +x /entry.sh
 
 ENTRYPOINT [ "/entry.sh" ]
