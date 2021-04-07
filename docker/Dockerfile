@@ -1,9 +1,3 @@
-FROM alpine as downloader
-
-WORKDIR /download
-
-RUN wget -O burpsuite.sh "https://portswigger.net/burp/releases/download?product=community&type=Linux"
-
 FROM lsiobase/rdesktop-web:bionic
 
 RUN \
@@ -26,14 +20,16 @@ RUN \
 		/var/lib/apt/lists/* \
 		/var/tmp/*
 
-COPY response.varfile /tmp
-COPY --from=downloader /download/burpsuite.sh /tmp/
-RUN \
-	echo "**** install burpsuite ****" && \
-	cd /tmp && \
-	chmod +x burpsuite.sh && \
-	./burpsuite.sh -q -varfile response.varfile && \
-	rm -rf /tmp/*
+#code below is left as a template for installing a program 
+#
+#COPY response.varfile /tmp
+#COPY --from=downloader /download/burpsuite.sh /tmp/
+#RUN \
+#	echo "**** install burpsuite ****" && \
+#	cd /tmp && \
+#	chmod +x burpsuite.sh && \
+#	./burpsuite.sh -q -varfile response.varfile && \
+#	rm -rf /tmp/*
 
 # add local files
 COPY /root /
