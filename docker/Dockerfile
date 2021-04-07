@@ -13,6 +13,12 @@ RUN \
 		xfce4-goodies \
 		xubuntu-default-settings \
 		xubuntu-icon-theme && \
+		tmux \
+		tldr \
+		vim \
+		nano \
+		wget \
+		sl \
 	echo "**** cleanup ****" && \
 	apt-get clean && \
 	rm -rf \
