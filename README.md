@@ -38,7 +38,7 @@ sudo docker run \
     kalilinux/kali:latest \
     /bin/bash
 ```
-## Metasploitable
+## Metasploitable2
 ```bash
 docker run \
     -it \
