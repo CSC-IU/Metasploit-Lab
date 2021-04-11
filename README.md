@@ -12,10 +12,9 @@ docker exec -it nmaplab /bin/bash
 [Click me once you have run the command!](http://127.0.0.1:8080)
 
 
-When you are done:
+When you are done (unless you want to keep playing around with it!):
 
 ```bash
 docker rm -f nmaplab
 docker system prune -a
 ```
-Finally delete the git repo (if you don't want it on your machine anymore :) )
