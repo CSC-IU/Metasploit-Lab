@@ -1,30 +1,18 @@
-FROM lsiobase/rdesktop-web:bionic
-
+FROM kalilinux/kali:latest
+LABEL maintainer="CSC Club @ IU"
 RUN \
-	echo "**** install packages ****" && \
-	apt-get update && \
-	DEBIAN_FRONTEND=noninteractive \
-	apt-get install --no-install-recommends -y \
-		firefox \
-		libnss3 \
-		pavucontrol \
-		terminator \
-		xfce4 \
-		xfce4-goodies \
-		xubuntu-default-settings \
-		xubuntu-icon-theme && \
-		tmux \
-		tldr \
-		vim \
-		nano \
-		wget \
-		sl \
-	echo "**** cleanup ****" && \
-	apt-get clean && \
-	rm -rf \
-		/tmp/* \
-		/var/lib/apt/lists/* \
-		/var/tmp/*
+	echo "**** RUNNING FILE ****"
+
+RUN echo "**** INSTALLING DEPENDENCIES ****" && \
+	apt-get update && apt-get -y install apache2 \
+	net-tools \
+	curl \
+	nmap \
+	vim \
+	nano \
+	tldr
+
+
 
 #code below is left as a template for installing a program 
 #
@@ -38,9 +26,9 @@ RUN \
 #	rm -rf /tmp/*
 
 # add local files
-COPY /root /
-COPY /desktop /config/Desktop
+# COPY /root /
+# COPY /desktop /config/Desktop
 
 # ports and volumes
-EXPOSE 3000
-VOLUME /config
+EXPOSE 80
+# VOLUME /config
