@@ -1,6 +1,8 @@
 # Labs
 
-This is the repository for the Metasploit lab. Here we have a basic dockerfile network that connects a Kali OS to a Metasploitable2 OS. Metasploitable is a highly vulnerable OS made specifically to practice pentesting on!
+This is the repository for the Metasploit lab. Here we have a basic dockerfile network that connects a Kali OS to a Metasploitable2 OS. 
+   
+Metasploitable is a highly vulnerable OS made specifically to practice pentesting on!
 
 # Create the network
 To create the Docker network that will be used to allow connectivity between our containers:
