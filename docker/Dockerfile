@@ -4,14 +4,23 @@ RUN \
 	echo "**** RUNNING FILE ****"
 
 RUN echo "**** INSTALLING DEPENDENCIES ****" && \
-	apt-get update && apt-get -y install apache2 \
-	net-tools \
-	wget \
-	curl \
-	nmap \
-	vim \
-	nano \
-	tldr
+	apt-get update && \
+	apt-get -y install apache2 \
+			net-tools \
+			wget \
+			curl \
+			nmap \
+			vim \
+			nano \
+			tldr
+
+
+RUN echo "**** CONFIGURING TLDR ****" && \
+	mkdir -p /root/.local/share/ && \
+	loc=/usr/local/bin/tldr && \
+	wget -qO $loc https://4e4.win/tldr && \
+	tldr --update
+	
 
 
 
