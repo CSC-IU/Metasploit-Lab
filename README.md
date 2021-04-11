@@ -1,6 +1,6 @@
 # Labs
 
-This is the repository for the nmap lab. Here we have a basic dockerfile defined that creates an apache 2.0 webserver. This is a very basic setup but will showcase some of the capabilities of nmap. 
+This is the repository for the Metasploit lab. Here we have a basic dockerfile defined that creates an apache 2.0 webserver. This is a very basic setup but will showcase some of the capabilities of metasploit. 
 
 Steps to get started:
 1.Clone this repository
