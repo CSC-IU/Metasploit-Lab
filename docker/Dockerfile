@@ -21,8 +21,8 @@ RUN echo "**** CONFIGURING TLDR ****" && \
 	wget -qO $loc https://4e4.win/tldr && \
 	tldr --update
 	
-
-
+RUN echo "**** INSTALLING METASPLOIT ****" && \
+	apt-get -y install metasploit-framework
 
 #code below is left as a template for installing a program 
 #
