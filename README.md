@@ -23,4 +23,4 @@ When you are done:
 docker rm -f nmaplab
 docker system prune -a
 ```
-Finally delete the git repo provided that you do not want it on your machine anymore : )
+Finally delete the git repo (if you don't want it on your machine anymore :) )
