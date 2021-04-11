@@ -6,6 +6,7 @@ RUN \
 RUN echo "**** INSTALLING DEPENDENCIES ****" && \
 	apt-get update && apt-get -y install apache2 \
 	net-tools \
+	wget \
 	curl \
 	nmap \
 	vim \
