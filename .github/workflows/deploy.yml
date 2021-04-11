@@ -10,8 +10,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Set Image Info
         run: |
-          export CIMETA="secclub/burpsuite-desktop"
-          export IMAGEBASE="ghcr.io/csc-iu/labs/burpsuite"
+          export CIMETA="cybsecclub/metasploit.able"
+          export IMAGEBASE="ghcr.io/csc-iu/labs/Metasploit-lab"
           echo "CIMETA=${CIMETA}" >> $GITHUB_ENV
           echo "IMAGEBASE=${IMAGEBASE}" >> $GITHUB_ENV
           echo CI Image set as : ${CIMETA}
@@ -65,13 +65,3 @@ jobs:
         run: |
           docker tag ${CIMETA} ${IMAGEBASE}:${GITHUB_REF##*/}
           docker push ${IMAGEBASE}:${GITHUB_REF##*/}
-
-      - name: Save tarball
-        run: |
-          docker save --output burpsuite.tar ${CIMETA}
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: ci-burpsuite-${{ github.run_number }}.tar
-          path: burpsuite.tar
