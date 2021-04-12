@@ -14,7 +14,7 @@ Then we will need to create two containers, one for Metasploit and the other for
 
 ## Metasploit:
 ```bash
-docker pull kalilinux/kali:latest
+docker pull ghcr.io/csc-iu/labs/metasploit-lab
 ```
 
 ## Metasploitable2:
@@ -37,7 +37,7 @@ sudo docker run \
     --device /dev/snd \
     --device /dev/dri \
     --mount type=bind,src=/tmp/.X11-unix,dst=/tmp/.X11-unix \
-    kalilinux/kali:latest \
+    ghcr.io/csc-iu/labs/metasploit-lab \
     /bin/bash
 ```
 ## Metasploitable2 
