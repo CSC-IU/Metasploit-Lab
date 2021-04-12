@@ -11,7 +11,7 @@ jobs:
       - name: Set Image Info
         run: |
           export CIMETA="cybsecclub/metasploit.able"
-          export IMAGEBASE="ghcr.io/csc-iu/labs/Metasploit-lab"
+          export IMAGEBASE="ghcr.io/csc-iu/labs/metasploit-lab"
           echo "CIMETA=${CIMETA}" >> $GITHUB_ENV
           echo "IMAGEBASE=${IMAGEBASE}" >> $GITHUB_ENV
           echo CI Image set as : ${CIMETA}
