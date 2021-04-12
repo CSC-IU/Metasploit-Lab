@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  metasploit:
+    image: ghcr.io/csc-iu/labs/metasploit-lab
+    networks:
+      - vulnerable
+    #if persistance is necessary
+    #volumes:
+    #  - ./ur/PC:/container/folder
+    #  - ./zm/db:/var/lib/mysql
+    #environment variables
+    #environment:
+    #  - MYSQL_DATABASE=zm
+    
+  metasploitable:
+    image: tleemcjr/metasploitable2
+    networks:
+      - vulnerable
+
+networks:
+  vulnerable:
