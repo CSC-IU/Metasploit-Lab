@@ -17,6 +17,7 @@ services:
     image: tleemcjr/metasploitable2
     networks:
       - vulnerable
+    command: ["/bin/sh","-c","/bin/services.sh; while :; do sleep 1; done"]
 
 networks:
   vulnerable:

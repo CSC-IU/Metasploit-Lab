@@ -1,20 +1,16 @@
-FROM kalilinux/kali:latest
+FROM metasploitframework/metasploit-framework
 LABEL maintainer="CSC Club @ IU"
-RUN \
-	echo "**** RUNNING FILE ****"
 
 RUN echo "**** INSTALLING DEPENDENCIES ****" && \
-	apt-get update && \
-	apt-get -y install apache2 \
-			net-tools \
-			wget \
-			curl \
-			nmap \
-			vim \
-			nano \
-			tldr \
-			iputils-ping
+	apk add \
+		wget \
+		curl \
+		nmap \
+		vim \
+		nano \
+		npm
 
+RUN npm install -g tldr
 
 RUN echo "**** CONFIGURING TLDR ****" && \
 	mkdir -p /root/.local/share/ && \
@@ -22,8 +18,14 @@ RUN echo "**** CONFIGURING TLDR ****" && \
 	wget -qO $loc https://4e4.win/tldr && \
 	tldr --update
 	
-RUN echo "**** INSTALLING METASPLOIT ****" && \
-	apt-get -y install metasploit-framework
+#RUN mkdir -p /dev/console
+
+#attempt to cache msfconsole stuff and then kill it to make it quicker to run later
+RUN /usr/src/metasploit-framework/msfconsole & \
+	sleep 30s 
+
+#RUN echo "**** INSTALLING METASPLOIT ****" && \
+#	apt-get -y install metasploit-framework
 
 #code below is left as a template for installing a program 
 #
@@ -43,3 +45,5 @@ RUN echo "**** INSTALLING METASPLOIT ****" && \
 # ports and volumes
 EXPOSE 80
 # VOLUME /config
+
+CMD ["/bin/sh","-c","while :; do sleep 1; done"]
