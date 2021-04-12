@@ -5,7 +5,7 @@ This is the repository for the Metasploit lab. Here we have a basic dockerfile n
 Metasploitable is a highly vulnerable OS made specifically to practice pentesting on!
 
 # Create the network
-To create the Docker network that will be used to allow connectivity between our containers:
+To create the Docker network named `vulnerable` that will be used to allow connectivity between our containers:
 ```bash
 sudo docker network create vulnerable --attachable --subnet 10.0.0.0/24
 ```
@@ -61,7 +61,7 @@ root@metasploitable2:/# services.sh
 
 # Exit
 
-To stop the container, close the terminal with `CTRL + D`.
+To stop the container, close the terminal with `CTRL + D`, or type `exit` and press enter.
 
 If you want to remove the images afterwards:
 ```bash
