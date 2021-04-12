@@ -12,7 +12,8 @@ RUN echo "**** INSTALLING DEPENDENCIES ****" && \
 			nmap \
 			vim \
 			nano \
-			tldr
+			tldr \
+			iputils-ping
 
 
 RUN echo "**** CONFIGURING TLDR ****" && \
