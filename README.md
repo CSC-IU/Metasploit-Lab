@@ -58,6 +58,21 @@ To do so, simple type `services.sh` in the home directory. It should look like t
 ```bash
 root@metasploitable2:/# services.sh
 ```
+# Test
+The IP address of each container is set when we give our `run` command, however, here is an additional way to check and test our connectivity.
+
+Find the IP address of the given container:
+```bash
+ifconfig
+```
+
+Then, using the IP address found through the previous command, test connectivity using `ping`:
+```bash
+ping $otherContainer
+```
+
+If the packets are delivered properly, then you are properly networked to the other container!
+
 
 # Exit
 
