@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Set Image Info
         run: |
-          export CIMETA="cybsecclub/metasploit.able"
+          export CIMETA="metasploit"
           export IMAGEBASE="ghcr.io/csc-iu/labs/metasploit-lab"
           echo "CIMETA=${CIMETA}" >> $GITHUB_ENV
           echo "IMAGEBASE=${IMAGEBASE}" >> $GITHUB_ENV
