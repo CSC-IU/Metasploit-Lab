@@ -23,7 +23,11 @@ In the same directory as the `docker-compose.yml` file:
 ```bash
 docker-compose up
 ```
-Be sure to leave this terminal window up!
+Be sure to leave this terminal window up! 
+
+It may take some time to finish, this is what it will stay at once finished running:
+
+![finished-docker-compose image](docs/finished-docker-compose.png)
 
 # Test
 After opening a new terminal session, run the following command to enter the Metasploit container:
@@ -31,10 +35,16 @@ After opening a new terminal session, run the following command to enter the Met
 docker exec -it metasploitlab_metasploit_1 /bin/sh
 ```
 
+In the current directory (`/usr/src/metasploit-framework`), run the following command to enter metasploit:
+```bash
+./msfconsole
+```
+
 Now test your connection and do a light check of what services are running on Metasploitable2!
 ```bash
-nmap metasploitable
+msf6 > nmap metasploitable
 ```
+(Note: you just type `nmap metasploit`, not the `msf6 >` part)
 
 # Exit
 
