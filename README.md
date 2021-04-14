@@ -26,6 +26,7 @@ docker-compose up
 Be sure to leave this terminal window up! 
 
 It may take some time to finish, this is what it will stay at once finished running:
+
 ![finished-docker-compose image](docs/finished-docker-compose.png)
 
 # Test
