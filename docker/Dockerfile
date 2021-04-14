@@ -8,7 +8,10 @@ RUN echo "**** INSTALLING DEPENDENCIES ****" && \
 		nmap \
 		vim \
 		nano \
-		npm
+		tree \			
+		#useful for quickly displaying the structure of directories
+		npm				
+		#necessary for installing metasploit
 
 RUN npm install -g tldr
 
