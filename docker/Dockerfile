@@ -11,7 +11,7 @@ RUN echo "**** INSTALLING DEPENDENCIES ****" && \
 		tree \			
 		#useful for quickly displaying the structure of directories
 		npm				
-		#necessary for installing metasploit
+		#tldr dependancy
 
 RUN npm install -g tldr
 
@@ -50,3 +50,4 @@ EXPOSE 80
 # VOLUME /config
 
 CMD ["/bin/sh","-c","while :; do sleep 1; done"]
+#used to avoid container immediately killing itself. 
