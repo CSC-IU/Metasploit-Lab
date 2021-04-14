@@ -12,7 +12,7 @@ To help with organizing and deploying this lab, we are using docker-compose to b
 sudo apt install -y docker-compose
 ```
 ## Download docker-compose file
-Either download or copy/paste the file `docker-compose.yml` into a suitable folder.
+Either download or copy/paste the file [docker-compose.yml]{docker-compose.yml} into a suitable folder.
 Using cUrl or wget is also a short command:
 ```bash
 wget https://raw.githubusercontent.com/CSC-IU/Metasploit-Lab/master/docker-compose.yml
