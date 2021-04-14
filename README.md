@@ -32,7 +32,7 @@ It may take some time to finish, this is what it will stay at once finished runn
 # Test
 After opening a new terminal session, run the following command to enter the Metasploit container:
 ```bash
-docker exec -it metasploitlab_metasploit_1 /bin/sh
+docker exec -it metasploit /bin/sh
 ```
 
 In the current directory (`/usr/src/metasploit-framework`), run the following command to enter metasploit:
@@ -48,15 +48,17 @@ msf6 > nmap metasploitable
 
 # Exit
 
+To exit Metasploit simply type `exit` and press enter.
+
 To stop the container, close the terminal with `CTRL + D`, or type `exit` and press enter.
 
-To close the containers and network:
+To close the containers and network, run this command in the same directory you kept `docker-compose.yml`:
 ```bash
 docker-compose down
 ```
 
 If you want to completely remove the images (be aware this means you would have to redownload them if you wanted to test it again), type:
 ```bash
-docker rm -f metasploitlab_metasploit_1 metasploitlab_metasploitable_1
+docker rm -f metasploit metasploitable
 docker system prune -a
 ```
