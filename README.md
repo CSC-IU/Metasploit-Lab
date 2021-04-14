@@ -26,7 +26,7 @@ docker-compose up
 Be sure to leave this terminal window up! 
 
 It may take some time to finish, this is what it will stay at once finished running:
-![finished-docker-compose image][https://github.com/CSC-IU/Metasploit-Lab/tree/master/docs/finished-docker-compose.png]
+[finished-docker-compose image](docs/finished-docker-compose.png)
 
 # Test
 After opening a new terminal session, run the following command to enter the Metasploit container:
